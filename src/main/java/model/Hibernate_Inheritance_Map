@@ -1,0 +1,15 @@
+MappedSuperclass -
+Inheritance is implemented in the domain model only without reflecting
+it in the database schema. In this strategy, the parent classes can’t be entities.
+
+
+Single table - The domain model class hierarchy is materialized
+into a single table which contains entities belonging to different class types.
+
+
+Joined table - The base class and all the subclasses have their own database
+tables and fetching a subclass entity requires a join with the parent table as well.
+
+
+Table per class - Each subclass has its own table containing both the subclass
+and the base class properties.
